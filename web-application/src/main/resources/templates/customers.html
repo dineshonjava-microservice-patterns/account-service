@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Customer Management Page | Dineshonjava.com</title>
+</head>
+<body>
+	<h2>Customer Management</h2>
+	<br />
+	<table border="1">
+		<tr>
+			<td>Customer Id</td>
+			<td>Name</td>
+			<td>Email</td>
+			<td>Mobile</td>
+			<td>City</td>
+			<td>Accounts</td>
+		</tr>
+
+		<tr th:each="customer: ${customers}">
+			<td th:text="${customer.customerId}" />
+			<td th:text="${customer.customerName}" />
+			<td th:text="${customer.mobile}" />
+			<td th:text="${customer.email}" />
+			<td th:text="${customer.city}" />
+			<td th:text="${customer.account}" />
+		</tr>
+	</table>
+</body>
+</html>
